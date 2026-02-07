@@ -1,0 +1,20 @@
+project_name: "Delivery Copilot"
+customer: "Internal (Tayel)"
+problem_statement: "I need a repeatable way to turn a vague request into a mini-spec, backlog, and weekly status updates to run delivery like a pro."
+success_criteria:
+  - "Generate MINI-SPEC.md, BACKLOG.md, STATUS.md from one intake file"
+  - "Docs are clear enough that another person can follow them"
+constraints:
+  - "No secrets in repo"
+  - "Small PRs"
+scope_in:
+  - "CLI tool to generate delivery docs"
+  - "Input validation for intake.yml"
+  - "Outputs stored in specs/capstone-delivery-copilot/generated"
+scope_out:
+  - "LLM integration (phase 2)"
+  - "GitHub issue creation (phase 2)"
+stakeholders:
+  - "Tayel"
+timeline:
+  target_release: "Week 1 end"

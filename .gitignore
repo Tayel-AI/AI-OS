@@ -1,3 +1,6 @@
+# Antigravity
+.agent/
+
 # Node
 node_modules/
 dist/
@@ -13,9 +16,6 @@ dist/
 .vscode/
 .idea/
 
-# Python (if we add later)
+# Python (if added later)
 .venv/
 __pycache__/
-
-# Antigravity
-.agent/
