@@ -16,3 +16,6 @@ dist/
 # Python (if we add later)
 .venv/
 __pycache__/
+
+# Antigravity
+.agent/
