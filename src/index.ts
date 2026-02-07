@@ -38,57 +38,6 @@ function ensureDir(dir: string) {
   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
 }
 
-function renderMiniSpec(i: Intake): string {
-  return `# Mini-Spec — ${i.project_name}
-
-**Customer/Org:** ${i.customer}  
-**Target release:** ${i.timeline.target_release}
-
-## Problem statement
-${i.problem_statement}
-
-## Success criteria
-${i.success_criteria.map((x) => `- ${x}`).join("\n")}
-
-## Scope (IN)
-${i.scope_in.map((x) => `- ${x}`).join("\n")}
-
-## Scope (OUT)
-${(i.scope_out.length ? i.scope_out : ["(none)"]).map((x) => `- ${x}`).join("\n")}
-
-## Constraints
-${(i.constraints.length ? i.constraints : ["(none)"]).map((x) => `- ${x}`).join("\n")}
-
-## Stakeholders
-${(i.stakeholders.length ? i.stakeholders : ["(none)"]).map((x) => `- ${x}`).join("\n")}
-
-## Risks & assumptions (starter)
-- Risk: unclear acceptance criteria → Mitigation: add testable AC per issue
-- Risk: agent-generated changes introduce regressions → Mitigation: CI + small PRs
-`;
-}
-
-function renderBacklog(i: Intake): string {
-  return `# Backlog — ${i.project_name}
-
-## Must-have issues
-${i.scope_in
-      .map(
-        (item, idx) => `### ISSUE-${String(idx + 1).padStart(3, "0")}: ${item}
-**Acceptance criteria**
-- Clear Given/When/Then
-- Tests added/updated
-- Docs updated if needed
-`
-      )
-      .join("\n")}
-
-## Nice-to-have
-- Add LLM-mode generator (phase 2)
-- Add GitHub issue creation (phase 2)
-`;
-}
-
 function renderStatusTemplate(i: Intake): string {
   return `# Weekly Status — ${i.project_name}
 
