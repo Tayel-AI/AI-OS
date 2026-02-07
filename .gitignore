@@ -13,6 +13,6 @@ dist/
 .vscode/
 .idea/
 
-# Python
+# Python (if we add later)
 .venv/
 __pycache__/
